@@ -61,7 +61,39 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Luxury color system
+				gold: {
+					DEFAULT: 'hsl(var(--gold))',
+					dark: 'hsl(var(--gold-dark))',
+					light: 'hsl(var(--gold-light))',
+					muted: 'hsl(var(--gold-muted))'
+				},
+				gray: {
+					dark: 'hsl(var(--gray-dark))',
+					medium: 'hsl(var(--gray-medium))',
+					light: 'hsl(var(--gray-light))',
+					lighter: 'hsl(var(--gray-lighter))'
 				}
+			},
+			backgroundImage: {
+				'gradient-gold': 'var(--gradient-gold)',
+				'gradient-gold-subtle': 'var(--gradient-gold-subtle)',
+				'gradient-gray': 'var(--gradient-gray)',
+				'gradient-luxury': 'var(--gradient-luxury)'
+			},
+			boxShadow: {
+				'gold': 'var(--shadow-gold)',
+				'elegant': 'var(--shadow-elegant)',
+				'soft': 'var(--shadow-soft)'
+			},
+			transitionTimingFunction: {
+				'luxury': 'cubic-bezier(0.4, 0, 0.2, 1)',
+				'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)'
+			},
+			fontFamily: {
+				'serif': ['Playfair Display', 'serif'],
+				'sans': ['Inter', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
