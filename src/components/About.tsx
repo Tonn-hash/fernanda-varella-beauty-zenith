@@ -11,9 +11,9 @@ export const About = () => {
               <img 
                 src="/lovable-uploads/f26b2796-a343-4877-9209-3e9119c450fa.png"
                 alt="Fernanda Varella - Profissional certificada"
-                className="w-full h-[500px] object-cover"
+                className="w-full h-[600px] object-cover object-top"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
             
             {/* Floating Achievement */}
