@@ -27,7 +27,7 @@ const CourseInstructor = () => (
           <img 
             src="/lovable-uploads/f26b2796-a343-4877-9209-3e9119c450fa.png"
             alt="Fernanda Varella - Mentora"
-            className="w-full h-[500px] object-cover rounded-2xl shadow-elegant"
+            className="w-full h-[600px] object-cover object-top rounded-2xl shadow-elegant"
           />
           <div className="absolute -bottom-6 -right-6 bg-gradient-gold p-4 rounded-xl shadow-gold">
             <Award className="h-8 w-8 text-white" />
