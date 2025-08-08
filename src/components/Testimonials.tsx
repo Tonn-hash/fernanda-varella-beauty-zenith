@@ -4,51 +4,57 @@ import { Card } from "./ui/card";
 const testimonials = [
   {
     id: 1,
-    name: "Marina Silva",
+    name: "Zingara Nascimento",
     image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
     rating: 5,
-    text: "Fernanda é simplesmente incrível! Minha sobrancelha ficou perfeita, exatamente como eu sempre sonhei. O resultado é muito natural e duradouro.",
-    service: "Micropigmentação Fio a Fio"
+    text: "Estava extremamente insegura, não por receio de que o resultado ficasse ruim, mas por se tratar de algo no meu rosto. Sempre fui uma pessoa discreta e, por isso, não queria nada que chamasse atenção ou alterasse minha identidade visual.",
+    service: "Micropigmentação",
+    period: "2 meses atrás"
   },
   {
     id: 2,
-    name: "Carla Mendes",
+    name: "Ana Raquel Barros Deziderio",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
     rating: 5,
-    text: "Profissional excepcional! Explicou todo o processo, me deixou muito tranquila. O ambiente é acolhedor e o resultado superou minhas expectativas.",
-    service: "Design + Micropigmentação"
+    text: "Atendimento maravilhoso, excelente profissional e entrega um resultado impecável. Amei minha micropigmentação na sobrancelha e na boca. Indico de olhos fechados!",
+    service: "Micropigmentação Sobrancelha e Lábios",
+    period: "1 mês atrás"
   },
   {
     id: 3,
-    name: "Ana Paula",
+    name: "Waléria Barreto",
     image: "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=150&h=150&fit=crop&crop=face",
     rating: 5,
-    text: "Depois de anos tentando fazer minha sobrancelha em casa, finalmente encontrei a Fernanda. Mudou completamente meu rosto! Recomendo demais.",
-    service: "Correção de Assimetria"
+    text: "Espaço super aconchegante, atendimento atencioso e delicado, cafezinho com biscoitos especiais 🥰 A especialista tem mãos de fadas que deixa todo procedimento light. Ameiiiii de mais 🫶🏻",
+    service: "Micropigmentação",
+    period: "Recente"
   },
   {
     id: 4,
-    name: "Juliana Costa",
+    name: "Albanita Alves",
     image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop&crop=face",
     rating: 5,
-    text: "Atendimento impecável desde o primeiro contato. Fernanda tem um olhar artístico único. Minha autoestima aumentou muito depois do procedimento!",
-    service: "Powder Brows"
+    text: "Eu amo o seu trabalho, você é uma excelente profissional, eu me sinto em casa, ficou tão à vontade que você se tornou uma amiga.",
+    service: "Micropigmentação",
+    period: "Recente"
   },
   {
     id: 5,
-    name: "Roberta Lima",
+    name: "Thainara Alita",
     image: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=150&h=150&fit=crop&crop=face",
     rating: 5,
-    text: "Experiência maravilhosa! Fernanda é muito cuidadosa, usa produtos de qualidade e o resultado é incrível. Vale cada centavo investido.",
-    service: "Micropigmentação Completa"
+    text: "Ótimo atendimento, muito profissional e excelente trabalho! Amei e recomendo 😍",
+    service: "Micropigmentação",
+    period: "Recente"
   },
   {
     id: 6,
-    name: "Camila Santos",
+    name: "Gleyce Oliveira",
     image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
     rating: 5,
-    text: "Sempre tive vergonha das minhas sobrancelhas. A Fernanda transformou não só meu olhar, mas minha confiança. Profissional top!",
-    service: "Reconstrução Total"
+    text: "Eu, Gleyce Oliveira, amei minha micropigmentação fio a fio e irei voltar novamente, ficou perfeita o antes e o depois.",
+    service: "Micropigmentação Fio a Fio",
+    period: "Recente"
   }
 ];
 
