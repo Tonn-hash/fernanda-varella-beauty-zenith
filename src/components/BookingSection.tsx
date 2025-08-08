@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
 import { Input } from "./ui/input";
@@ -10,6 +10,16 @@ import { useToast } from "@/hooks/use-toast";
 
 export const BookingSection = () => {
   const { toast } = useToast();
+  
+  // Listen for service pre-selection from Services component
+  useEffect(() => {
+    const handlePreSelectService = (event: CustomEvent) => {
+      setFormData(prev => ({ ...prev, service: event.detail }));
+    };
+    
+    window.addEventListener('preSelectService', handlePreSelectService as EventListener);
+    return () => window.removeEventListener('preSelectService', handlePreSelectService as EventListener);
+  }, []);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -21,12 +31,56 @@ export const BookingSection = () => {
   });
 
   const services = [
-    "Micropigmentação Fio a Fio",
-    "Powder Brows",
+    // Design de Sobrancelhas
     "Design de Sobrancelhas",
-    "Correção de Assimetria",
-    "Retoque/Manutenção",
-    "Consulta Avaliativa"
+    "Design com Henna",
+    "Design com Tintura", 
+    "Design Reconstrutivo",
+    "Glow Brows",
+    "Glow Up",
+    // Micropigmentação
+    "Avaliação de Micropigmentação",
+    "Correção de Simetria ou Camuflagem",
+    "Flor Brows Nano Fios",
+    "Fio a Fio",
+    "Shadingline",
+    "Shadow",
+    "Micropigmentação de Barba",
+    "Micropigmentação de Lábios - Efeito Batom",
+    "Hydra Gloss Color",
+    "Neutralização Labial",
+    // Estética Facial
+    "Argiloterapia Facial",
+    "Dermaplaning",
+    "Hidratação Express Facial",
+    "Limpeza de Pele + Dermaplaning",
+    "Limpeza de Pele + Hydra Gloss",
+    "Limpeza Premium",
+    "Limpeza Ultrassônica",
+    "Limpeza com Peeling de Diamante",
+    "Peeling Enzimático",
+    "Revitalização Facial",
+    "Remoção de Cravos (indolor)",
+    "Remoção de Sinais",
+    "Spa Facial",
+    // Depilação
+    "Axilas",
+    "Inguinal Completa",
+    "Meia Perna",
+    "Perna Completa",
+    "Nariz",
+    "Buço",
+    "Virilha",
+    "Rosto Total",
+    "Queixo",
+    // Combos
+    "Design com Buço",
+    "Design com Henna + Buço",
+    "Design com Tintura + Buço",
+    // Cílios
+    "Cílios Look Francês",
+    // Outros
+    "Consulta Personalizada"
   ];
 
   const timeSlots = [
