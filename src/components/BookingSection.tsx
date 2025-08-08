@@ -281,9 +281,8 @@ export const BookingSection = () => {
                   <div>
                     <div className="font-semibold text-primary">Endereço</div>
                     <div className="text-gray-medium">
-                      Rua das Flores, 123 - Sala 45<br />
-                      Vila Madalena, São Paulo - SP<br />
-                      CEP: 01234-567
+                      Fernanda Varella Micropigmentação Avançada<br />
+                      Natal - RN
                     </div>
                   </div>
                 </div>
@@ -329,15 +328,18 @@ export const BookingSection = () => {
               </div>
             </Card>
 
-            {/* Map Placeholder */}
+            {/* Google Maps */}
             <Card className="p-0 overflow-hidden shadow-elegant border-border/50">
-              <div className="h-64 bg-gradient-to-br from-gray-light to-gray-lighter flex items-center justify-center">
-                <div className="text-center text-gray-medium">
-                  <MapPin className="h-12 w-12 mx-auto mb-2" />
-                  <div className="font-semibold">Localização</div>
-                  <div className="text-sm">Vila Madalena, São Paulo</div>
-                </div>
-              </div>
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.6810455575883!2d-35.248505!3d-5.758962499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b3ab22621d9a0b%3A0xb238dd00a16b5f00!2sFernanda%20Varella%20Micropigmenta%C3%A7%C3%A3o%20Avan%C3%A7ada!5e0!3m2!1spt-BR!2sbr!4v1754615469793!5m2!1spt-BR!2sbr" 
+                width="100%" 
+                height="300" 
+                style={{ border: 0 }} 
+                allowFullScreen={true} 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Localização Fernanda Varella"
+              />
             </Card>
           </div>
         </div>

@@ -94,11 +94,9 @@ export const Testimonials = () => {
 
               {/* Client Info */}
               <div className="flex items-center gap-4">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover"
-                />
+                <div className="w-12 h-12 rounded-full bg-gradient-gold flex items-center justify-center text-white font-bold text-lg">
+                  {testimonial.name.charAt(0).toUpperCase()}
+                </div>
                 <div>
                   <div className="font-semibold text-primary">{testimonial.name}</div>
                   <div className="text-sm text-gold">{testimonial.service}</div>
