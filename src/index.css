@@ -2,9 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Fernanda Varella Beauty Academy - Luxury Design System 
-All colors MUST be HSL. Elegant gray and gold palette.
+/* Fernanda Varella Beauty Academy - Premium Design System 
+All colors MUST be HSL. Luxury aesthetic with sophisticated elements.
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
@@ -136,6 +138,107 @@ All colors MUST be HSL. Elegant gray and gold palette.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  /* Premium Button Variants */
+  .btn-premium {
+    @apply relative overflow-hidden bg-gradient-gold text-primary font-semibold px-8 py-4 rounded-lg shadow-gold transition-all duration-300 hover:shadow-elegant hover:scale-105 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700;
+  }
+
+  .btn-glass {
+    @apply relative backdrop-blur-md bg-white/10 border border-white/20 text-white font-medium px-6 py-3 rounded-lg shadow-soft transition-all duration-300 hover:bg-white/20 hover:scale-105;
+  }
+
+  /* Premium Cards */
+  .card-premium {
+    @apply relative bg-card border border-border/50 rounded-xl shadow-elegant hover:shadow-gold transition-all duration-500 hover:scale-[1.02] backdrop-blur-sm;
+  }
+
+  .card-glass {
+    @apply relative backdrop-blur-lg bg-white/5 border border-white/10 rounded-xl shadow-soft;
+  }
+
+  /* Text Effects */
+  .text-luxury {
+    @apply bg-gradient-gold bg-clip-text text-transparent font-serif font-semibold;
+  }
+
+  .text-shimmer {
+    @apply relative bg-gradient-to-r from-gold via-gold-light to-gold bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer;
+  }
+
+  /* Interactive Elements */
+  .hover-lift {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-elegant;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-gold hover:scale-105;
+  }
+
+  /* Section Animations */
+  .reveal-fade {
+    @apply animate-fade-in;
+  }
+
+  .reveal-slide-up {
+    @apply animate-fade-in-up;
+  }
+
+  .reveal-scale {
+    @apply animate-scale-in;
+  }
+
+  /* Decorative Elements */
+  .decoration-gold::before {
+    content: '';
+    @apply absolute -top-1 -left-1 w-4 h-4 bg-gradient-gold rounded-full opacity-60;
+  }
+
+  .decoration-gold::after {
+    content: '';
+    @apply absolute -bottom-1 -right-1 w-3 h-3 bg-gold-light rounded-full opacity-40;
+  }
+
+  /* Typography Enhancements */
+  .heading-hero {
+    @apply font-serif font-bold text-5xl lg:text-6xl xl:text-7xl leading-[1.1] tracking-tight;
+  }
+
+  .heading-section {
+    @apply font-serif font-semibold text-3xl lg:text-4xl xl:text-5xl leading-tight tracking-tight;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Layout Utilities */
+  .container-luxury {
+    @apply container mx-auto px-6 lg:px-8 xl:px-12;
+  }
+
+  .section-padding {
+    @apply py-16 lg:py-24 xl:py-32;
+  }
+
+  /* Background Patterns */
+  .bg-dots {
+    background-image: radial-gradient(circle, hsl(var(--gold) / 0.1) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .bg-grid {
+    background-image: linear-gradient(hsl(var(--border) / 0.3) 1px, transparent 1px),
+                      linear-gradient(90deg, hsl(var(--border) / 0.3) 1px, transparent 1px);
+    background-size: 32px 32px;
   }
 }

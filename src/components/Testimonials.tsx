@@ -73,56 +73,90 @@ export const Testimonials = () => {
           </p>
         </div>
 
-        {/* Testimonials Grid */}
+        {/* Premium Testimonials Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial) => (
-            <Card key={testimonial.id} className="p-6 hover:shadow-elegant transition-all duration-300 border-border/50 hover:border-gold/20">
-              {/* Quote Icon */}
-              <div className="flex justify-between items-start mb-4">
-                <Quote className="h-8 w-8 text-gold opacity-50" />
-                <div className="flex gap-1">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 text-gold fill-current" />
-                  ))}
-                </div>
+          {testimonials.map((testimonial, index) => (
+            <div 
+              key={testimonial.id} 
+              className="card-premium p-8 hover-glow group relative overflow-hidden animate-fade-in-up"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              {/* Decorative Quote Background */}
+              <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-gold/10 rounded-full flex items-center justify-center opacity-50">
+                <Quote className="h-8 w-8 text-gold" />
+              </div>
+              
+              {/* Rating Stars */}
+              <div className="flex gap-1 mb-6">
+                {[...Array(testimonial.rating)].map((_, i) => (
+                  <Star key={i} className="h-5 w-5 text-gold fill-current" />
+                ))}
               </div>
 
               {/* Testimonial Text */}
-              <p className="text-gray-medium mb-6 leading-relaxed">
+              <blockquote className="text-gray-medium mb-8 leading-relaxed text-lg relative z-10 italic">
                 "{testimonial.text}"
-              </p>
+              </blockquote>
 
-              {/* Client Info */}
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-gold flex items-center justify-center text-white font-bold text-lg">
+              {/* Premium Client Info */}
+              <div className="flex items-center gap-4 pt-4 border-t border-gold/20">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-gold flex items-center justify-center text-white font-bold text-xl shadow-gold group-hover:scale-110 transition-transform duration-300">
                   {testimonial.name.charAt(0).toUpperCase()}
                 </div>
-                <div>
-                  <div className="font-semibold text-primary">{testimonial.name}</div>
-                  <div className="text-sm text-gold">{testimonial.service}</div>
+                <div className="flex-1">
+                  <div className="font-serif font-semibold text-lg text-primary">{testimonial.name}</div>
+                  <div className="text-sm text-gold font-medium">{testimonial.service}</div>
+                  <div className="text-xs text-gray-medium mt-1">{testimonial.period}</div>
                 </div>
               </div>
-            </Card>
+
+              {/* Hover Effect Border */}
+              <div className="absolute inset-0 rounded-xl border-2 border-gold/0 group-hover:border-gold/30 transition-all duration-300 pointer-events-none"></div>
+            </div>
           ))}
         </div>
 
-        {/* CTA Section */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-gold-subtle p-8 rounded-2xl border border-gold/20">
-            <h3 className="text-2xl font-serif font-bold text-primary mb-4">
-              Pronta para Sua Transformação?
-            </h3>
-            <p className="text-gray-medium mb-6 max-w-2xl mx-auto">
-              Junte-se às centenas de mulheres que já transformaram seu olhar e autoestima 
-              com nossas técnicas exclusivas.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-gold text-white px-8 py-3 rounded-lg font-semibold hover:shadow-gold transition-all duration-300">
-                Agendar Consulta Gratuita
-              </button>
-              <button className="border border-gold text-gold px-8 py-3 rounded-lg font-semibold hover:bg-gold hover:text-white transition-all duration-300">
-                Ver Mais Depoimentos
-              </button>
+        {/* Premium CTA Section */}
+        <div className="mt-20">
+          <div className="card-premium p-12 bg-gradient-to-r from-gold-light/10 to-gold/5 border-l-4 border-gold relative overflow-hidden text-center">
+            <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-gold rounded-full blur-3xl opacity-10"></div>
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-luxury rounded-full blur-3xl opacity-5"></div>
+            
+            <div className="relative z-10 space-y-8">
+              <div>
+                <h3 className="font-serif font-bold text-3xl lg:text-4xl text-luxury mb-4">
+                  Pronta para Sua Transformação?
+                </h3>
+                <p className="text-xl text-gray-medium max-w-3xl mx-auto leading-relaxed font-light">
+                  Junte-se às centenas de mulheres que já <span className="text-gold font-medium">transformaram 
+                  seu olhar e autoestima</span> com nossas técnicas exclusivas e personalizadas.
+                </p>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <button className="btn-premium">
+                  Agendar Consulta Gratuita
+                </button>
+                <button className="btn-glass border border-gold/30 text-gold hover:bg-gold hover:text-white">
+                  Ver Mais Depoimentos
+                </button>
+              </div>
+              
+              {/* Trust Indicators */}
+              <div className="flex flex-wrap justify-center gap-6 pt-6 border-t border-gold/20">
+                <div className="flex items-center gap-2 text-sm text-gray-medium">
+                  <Star className="w-4 h-4 text-gold" />
+                  <span>Consulta sem compromisso</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-medium">
+                  <Star className="w-4 h-4 text-gold" />
+                  <span>Certificação internacional</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-medium">
+                  <Star className="w-4 h-4 text-gold" />
+                  <span>Resultados garantidos</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
