@@ -1,33 +1,29 @@
 import { useState } from "react";
 import { Button } from "./ui/button";
-import { ChevronLeft, ChevronRight, Eye } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const portfolioImages = [
   {
     id: 1,
-    before: "https://images.unsplash.com/photo-1580618308533-5f2f4ff5a6a3?w=400&h=400&fit=crop",
-    after: "https://images.unsplash.com/photo-1577880216142-8549e9488dad?w=400&h=400&fit=crop",
+    image: "/lovable-uploads/644ab699-da90-4902-8735-a7fdfaa134ff.png",
     title: "Micropigmentação Fio a Fio",
     description: "Técnica natural que imita os pelos da sobrancelha"
   },
   {
     id: 2,
-    before: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=400&fit=crop",
-    after: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&h=400&fit=crop",
+    image: "/lovable-uploads/a5bcc927-318a-4ac8-a47f-ff05feb471ad.png",
     title: "Design Personalizado",
     description: "Formato único para cada rosto"
   },
   {
     id: 3,
-    before: "https://images.unsplash.com/photo-1570662953942-c5bc8b4b2bb5?w=400&h=400&fit=crop",
-    after: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400&h=400&fit=crop",
+    image: "/lovable-uploads/80264689-3300-43f5-8f78-f46af0a924b0.png",
     title: "Efeito Powder Brows",
     description: "Resultado sombreado e natural"
   },
   {
     id: 4,
-    before: "https://images.unsplash.com/photo-1605462863769-848ce4f37b59?w=400&h=400&fit=crop",
-    after: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400&h=400&fit=crop",
+    image: "/lovable-uploads/ee5c1e1f-a94c-4aee-ba29-f0ee9e2c79db.png",
     title: "Correção de Assimetria",
     description: "Harmonização facial completa"
   }
@@ -35,16 +31,13 @@ const portfolioImages = [
 
 export const Portfolio = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [showBefore, setShowBefore] = useState(true);
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % portfolioImages.length);
-    setShowBefore(true);
   };
 
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev - 1 + portfolioImages.length) % portfolioImages.length);
-    setShowBefore(true);
   };
 
   const currentImage = portfolioImages[currentIndex];
@@ -68,30 +61,10 @@ export const Portfolio = () => {
           <div className="relative mb-8">
             <div className="relative overflow-hidden rounded-2xl shadow-elegant aspect-video">
               <img
-                src={showBefore ? currentImage.before : currentImage.after}
+                src={currentImage.image}
                 alt={currentImage.title}
                 className="w-full h-full object-cover transition-all duration-500"
               />
-              
-              {/* Before/After Toggle */}
-              <div className="absolute top-4 left-4">
-                <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                  showBefore 
-                    ? 'bg-red-500 text-white' 
-                    : 'bg-gradient-gold text-white'
-                }`}>
-                  {showBefore ? 'ANTES' : 'DEPOIS'}
-                </span>
-              </div>
-
-              {/* Toggle Button */}
-              <button
-                onClick={() => setShowBefore(!showBefore)}
-                className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium hover:bg-white transition-colors duration-200 flex items-center gap-2"
-              >
-                <Eye className="h-4 w-4" />
-                Ver {showBefore ? 'Depois' : 'Antes'}
-              </button>
             </div>
 
             {/* Navigation Arrows */}
@@ -124,10 +97,7 @@ export const Portfolio = () => {
             {portfolioImages.map((image, index) => (
               <button
                 key={image.id}
-                onClick={() => {
-                  setCurrentIndex(index);
-                  setShowBefore(true);
-                }}
+                onClick={() => setCurrentIndex(index)}
                 className={`w-16 h-16 rounded-lg overflow-hidden border-2 transition-all duration-200 ${
                   index === currentIndex 
                     ? 'border-gold shadow-gold scale-110' 
@@ -135,7 +105,7 @@ export const Portfolio = () => {
                 }`}
               >
                 <img
-                  src={image.after}
+                  src={image.image}
                   alt={image.title}
                   className="w-full h-full object-cover"
                 />
