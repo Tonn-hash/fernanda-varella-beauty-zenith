@@ -84,8 +84,8 @@ export const BookingSection = () => {
   ];
 
   const timeSlots = [
-    "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
-    "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00"
+    "09:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30",
+    "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00"
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -281,7 +281,7 @@ export const BookingSection = () => {
                   <div>
                     <div className="font-semibold text-primary">Endereço</div>
                     <div className="text-gray-medium">
-                      Fernanda Varella Micropigmentação Avançada<br />
+                      Avenida Senhor Do Bonfim 170<br />
                       Natal - RN
                     </div>
                   </div>
@@ -294,7 +294,7 @@ export const BookingSection = () => {
                   <div>
                     <div className="font-semibold text-primary">Telefone</div>
                     <div className="text-gray-medium">
-                      (11) 99999-9999<br />
+                      +55 84 99821-5389<br />
                       WhatsApp disponível
                     </div>
                   </div>
@@ -319,8 +319,8 @@ export const BookingSection = () => {
                   <div>
                     <div className="font-semibold text-primary">Horário de Funcionamento</div>
                     <div className="text-gray-medium">
-                      Segunda a Sexta: 9h às 18h<br />
-                      Sábado: 9h às 16h<br />
+                      Segunda a Sexta: 09:30 - 19:00<br />
+                      Sábado: 09:30 - 19:30<br />
                       Domingo: Fechado
                     </div>
                   </div>

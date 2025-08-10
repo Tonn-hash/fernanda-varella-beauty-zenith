@@ -77,14 +77,14 @@ export const Footer = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-gold mt-1 flex-shrink-0" />
                 <div className="text-gray-light text-sm">
-                  Rua das Flores, 123 - Sala 45<br />
-                  Vila Madalena, São Paulo - SP
+                  Avenida Senhor Do Bonfim 170<br />
+                  Natal - RN
                 </div>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-gold flex-shrink-0" />
                 <div className="text-gray-light text-sm">
-                  (11) 99999-9999
+                  +55 84 99821-5389
                 </div>
               </div>
               <div className="flex items-center gap-3">
