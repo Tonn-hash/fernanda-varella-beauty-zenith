@@ -35,16 +35,9 @@ export const Services = () => {
   const [activeCategory, setActiveCategory] = useState("design");
 
   const handleBooking = (serviceName: string) => {
-    // Scroll to booking section and pre-select service
-    const bookingElement = document.querySelector('[data-booking-section]');
-    if (bookingElement) {
-      bookingElement.scrollIntoView({ behavior: 'smooth' });
-      // You could also dispatch an event here to pre-select the service
-      setTimeout(() => {
-        const event = new CustomEvent('preSelectService', { detail: serviceName });
-        window.dispatchEvent(event);
-      }, 500);
-    }
+    const message = `Olá! Gostaria de agendar o serviço: ${serviceName}`;
+    const whatsappUrl = `https://wa.me/message/DLP37RY6F3Y7E1?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   const categories: ServiceCategory[] = [

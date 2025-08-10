@@ -51,8 +51,11 @@ export const Hero = ({ type }: HeroProps) => {
                   variant="premium"
                   size="xl" 
                   className="group"
+                  onClick={() => {
+                    window.open('https://wa.me/message/DLP37RY6F3Y7E1', '_blank');
+                  }}
                 >
-                  Agendar Consulta
+                  Agendar pelo WhatsApp
                   <Calendar className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
                 </Button>
                 <Button 
@@ -161,6 +164,9 @@ export const Hero = ({ type }: HeroProps) => {
             <Button 
               size="lg" 
               className="bg-gradient-gold hover:shadow-gold transition-all duration-300 text-lg px-8 py-4 group"
+              onClick={() => {
+                window.open('https://wa.me/message/DLP37RY6F3Y7E1', '_blank');
+              }}
             >
               Garantir Minha Vaga
               <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
