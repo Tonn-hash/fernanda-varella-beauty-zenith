@@ -63,7 +63,9 @@ export const Portfolio = () => {
               <img
                 src={currentImage.image}
                 alt={currentImage.title}
-                className="w-full h-full object-cover transition-all duration-500"
+                className={`w-full h-full transition-all duration-500 ${
+                  currentIndex === 3 ? 'object-cover object-top' : 'object-cover'
+                }`}
               />
             </div>
 
