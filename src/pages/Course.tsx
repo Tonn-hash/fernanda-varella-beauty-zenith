@@ -25,7 +25,7 @@ const CourseInstructor = () => (
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div className="relative">
           <img 
-            src="/lovable-uploads/ee5c1e1f-a94c-4aee-ba29-f0ee9e2c79db.png"
+            src="/lovable-uploads/b76a84fe-732d-411a-bd17-4f98bfc1ca4c.png"
             alt="Fernanda Varella - Mentora"
             className="w-full h-[600px] object-cover object-top rounded-2xl shadow-elegant"
           />
