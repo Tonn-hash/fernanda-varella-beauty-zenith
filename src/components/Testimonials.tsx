@@ -134,8 +134,11 @@ export const Testimonials = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <button className="btn-premium">
-                  Agendar Consulta Gratuita
+                <button 
+                  className="btn-premium"
+                  onClick={() => window.open('https://wa.me/message/DLP37RY6F3Y7E1', '_blank')}
+                >
+                  Agendar pelo WhatsApp
                 </button>
                 <button className="btn-glass border border-gold/30 text-gold hover:bg-gold hover:text-white">
                   Ver Mais Depoimentos
@@ -146,7 +149,7 @@ export const Testimonials = () => {
               <div className="flex flex-wrap justify-center gap-6 pt-6 border-t border-gold/20">
                 <div className="flex items-center gap-2 text-sm text-gray-medium">
                   <Star className="w-4 h-4 text-gold" />
-                  <span>Consulta sem compromisso</span>
+                  <span>Atendimento personalizado</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-medium">
                   <Star className="w-4 h-4 text-gold" />

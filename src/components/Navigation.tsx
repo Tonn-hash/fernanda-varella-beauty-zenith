@@ -45,6 +45,7 @@ export const Navigation = () => {
               variant="premium"
               size="lg"
               className="shadow-gold"
+              onClick={() => window.open('https://wa.me/message/DLP37RY6F3Y7E1', '_blank')}
             >
               Agendar Consulta
             </Button>
@@ -84,6 +85,7 @@ export const Navigation = () => {
                 variant="premium"
                 size="lg"
                 className="w-fit shadow-gold"
+                onClick={() => window.open('https://wa.me/message/DLP37RY6F3Y7E1', '_blank')}
               >
                 Agendar Consulta
               </Button>
