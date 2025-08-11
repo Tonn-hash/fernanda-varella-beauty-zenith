@@ -15,28 +15,28 @@ export const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50 shadow-soft">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-xl border-b border-gold/10 shadow-elegant">
       <div className="container-luxury">
-        <div className="flex items-center justify-between h-24">
-          {/* Premium Logo */}
-          <Link to="/" className="transition-all duration-300 hover:scale-105 hover-glow">
-            <Logo size="sm" />
+        <div className="flex items-center justify-between h-28">
+          {/* Luxury Logo */}
+          <Link to="/" className="transition-all duration-400 hover:scale-105 hover-glow">
+            <Logo size="md" />
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-12">
+          {/* Premium Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-16">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 to={item.href}
                 className={cn(
-                  "relative text-sm font-medium transition-all duration-300 hover:text-gold group",
+                  "relative text-base font-medium transition-all duration-400 hover:text-gold group py-2",
                   item.active ? "text-gold" : "text-foreground"
                 )}
               >
                 {item.label}
                 <span className={cn(
-                  "absolute -bottom-1 left-0 h-0.5 bg-gradient-gold transition-all duration-300",
+                  "absolute -bottom-2 left-1/2 transform -translate-x-1/2 h-0.5 bg-gradient-gold transition-all duration-400 rounded-full",
                   item.active ? "w-full" : "w-0 group-hover:w-full"
                 )}></span>
               </Link>
@@ -44,10 +44,10 @@ export const Navigation = () => {
             <Button 
               variant="premium"
               size="lg"
-              className="shadow-gold"
+              className="shadow-gold font-semibold"
               onClick={() => window.open('https://wa.me/message/DLP37RY6F3Y7E1', '_blank')}
             >
-              Agendar Consulta
+              Agendar Atendimento
             </Button>
           </div>
 

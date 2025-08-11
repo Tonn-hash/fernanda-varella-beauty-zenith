@@ -2,32 +2,33 @@ import { Award, Heart, Star, Users } from "lucide-react";
 
 export const About = () => {
   return (
-    <section className="section-padding bg-gradient-to-br from-background to-gold-light/5 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-dots opacity-10"></div>
-      <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-gold rounded-full blur-3xl opacity-5 animate-float"></div>
+    <section className="section-padding bg-gradient-to-br from-background to-gold-light/3 relative overflow-hidden">
+      {/* Luxury Background Elements */}
+      <div className="absolute inset-0 bg-dots opacity-8"></div>
+      <div className="absolute top-32 right-32 w-80 h-80 bg-gradient-gold rounded-full blur-3xl opacity-6 animate-float"></div>
+      <div className="absolute bottom-20 left-20 w-64 h-64 bg-gradient-luxury rounded-full blur-3xl opacity-4"></div>
       
       <div className="container-luxury relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 xl:gap-24 items-center">
+        <div className="grid lg:grid-cols-2 gap-20 xl:gap-28 items-center">
           {/* Premium Image Section */}
           <div className="relative animate-slide-in-left">
-            {/* Main Image Container */}
+            {/* Luxury Image Container */}
             <div className="relative group">
-              <div className="absolute -inset-4 bg-gradient-gold opacity-20 rounded-3xl blur-xl group-hover:opacity-30 transition-opacity duration-500"></div>
-              <div className="relative overflow-hidden rounded-3xl shadow-elegant group-hover:shadow-gold transition-all duration-500">
+              <div className="absolute -inset-6 bg-gradient-gold opacity-15 rounded-3xl blur-2xl group-hover:opacity-25 transition-all duration-700"></div>
+              <div className="relative overflow-hidden rounded-3xl shadow-luxury group-hover:shadow-gold transition-all duration-700">
                 <img 
                   src="/lovable-uploads/f26b2796-a343-4877-9209-3e9119c450fa.png"
                   alt="Fernanda Varella - Profissional certificada"
-                  className="w-full h-[700px] object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-[750px] object-cover object-top group-hover:scale-[1.02] transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-gold/10"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-dark/40 via-transparent to-gold/8"></div>
               </div>
             </div>
             
-            {/* Premium Floating Achievement */}
-            <div className="absolute -top-8 -right-8 card-premium p-6 animate-float bg-card/95 backdrop-blur-sm border-gold/20">
-              <div className="h-16 w-16 bg-gradient-gold rounded-2xl flex items-center justify-center shadow-gold">
-                <Award className="h-8 w-8 text-white" />
+            {/* Luxury Floating Achievement */}
+            <div className="absolute -top-10 -right-10 card-premium p-8 animate-float bg-card/95 backdrop-blur-sm border-gold/25 shadow-luxury">
+              <div className="h-20 w-20 bg-gradient-premium rounded-3xl flex items-center justify-center shadow-gold">
+                <Award className="h-10 w-10 text-background" />
               </div>
             </div>
 
@@ -35,16 +36,16 @@ export const About = () => {
             <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-gradient-luxury rounded-full blur-2xl opacity-30 animate-pulse-glow"></div>
           </div>
 
-          {/* Premium Content */}
-          <div className="space-y-12 animate-fade-in-up">
-            <div className="space-y-8">
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-gold-subtle border border-gold/20 rounded-full text-sm font-medium text-gold-dark">
-                <Star className="w-4 h-4" />
-                Especialista Certificada
+          {/* Luxury Content */}
+          <div className="space-luxury-lg animate-fade-in-up">
+            <div className="space-luxury">
+              {/* Premium Badge */}
+              <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-gold-subtle border border-gold/25 rounded-full text-sm font-semibold text-gold-dark shadow-soft backdrop-blur-sm">
+                <Star className="w-4 h-4 fill-current" />
+                Especialista Certificada Internacional
               </div>
 
-              <h2 className="heading-section">
+              <h2 className="heading-section text-balance">
                 Sobre <span className="text-luxury">Fernanda Varella</span>
               </h2>
               

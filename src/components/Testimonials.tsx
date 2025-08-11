@@ -60,58 +60,68 @@ const testimonials = [
 
 export const Testimonials = () => {
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-serif font-bold text-primary mb-4">
-            O Que Dizem Nossas <span className="bg-gradient-gold bg-clip-text text-transparent">Clientes</span>
+    <section className="section-padding bg-gradient-to-br from-background to-gold-light/2 relative overflow-hidden">
+      {/* Luxury Background Elements */}
+      <div className="absolute inset-0 bg-dots opacity-6"></div>
+      <div className="absolute top-32 right-32 w-80 h-80 bg-gradient-gold rounded-full blur-3xl opacity-4 animate-float"></div>
+      <div className="absolute bottom-20 left-20 w-64 h-64 bg-gradient-luxury rounded-full blur-3xl opacity-3"></div>
+      
+      <div className="container-luxury relative z-10">
+        {/* Luxury Header */}
+        <div className="text-center mb-20 space-luxury">
+          <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-gold-subtle border border-gold/25 rounded-full text-sm font-semibold text-gold-dark shadow-soft backdrop-blur-sm mb-8">
+            <Quote className="w-4 h-4" />
+            Experiências Reais
+          </div>
+          
+          <h2 className="heading-section text-balance mb-8">
+            O Que Dizem Nossas <span className="text-luxury">Clientes</span>
           </h2>
-          <p className="text-lg text-gray-medium max-w-2xl mx-auto">
+          <p className="text-xl text-gray-medium max-w-3xl mx-auto leading-relaxed text-balance">
             Histórias reais de transformação e satisfação. Veja o que nossas clientes 
-            falam sobre nossa experiência única.
+            falam sobre nossa experiência única e sofisticada.
           </p>
         </div>
 
-        {/* Premium Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Luxury Testimonials Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {testimonials.map((testimonial, index) => (
             <div 
               key={testimonial.id} 
-              className="card-premium p-8 hover-glow group relative overflow-hidden animate-fade-in-up"
+              className="card-testimonial hover-glow group relative overflow-hidden animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Decorative Quote Background */}
-              <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-gold/10 rounded-full flex items-center justify-center opacity-50">
-                <Quote className="h-8 w-8 text-gold" />
+              {/* Luxury Quote Background */}
+              <div className="absolute top-6 right-6 w-20 h-20 bg-gradient-gold/8 rounded-full flex items-center justify-center opacity-60">
+                <Quote className="h-10 w-10 text-gold" />
               </div>
               
-              {/* Rating Stars */}
-              <div className="flex gap-1 mb-6">
+              {/* Premium Rating Stars */}
+              <div className="flex gap-2 mb-8">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 text-gold fill-current" />
+                  <Star key={i} className="h-6 w-6 text-gold fill-current" />
                 ))}
               </div>
 
-              {/* Testimonial Text */}
-              <blockquote className="text-gray-medium mb-8 leading-relaxed text-lg relative z-10 italic">
+              {/* Elegant Testimonial Text */}
+              <blockquote className="text-gray-medium mb-10 leading-relaxed text-lg relative z-10 italic font-light text-balance">
                 "{testimonial.text}"
               </blockquote>
 
-              {/* Premium Client Info */}
-              <div className="flex items-center gap-4 pt-4 border-t border-gold/20">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-gold flex items-center justify-center text-white font-bold text-xl shadow-gold group-hover:scale-110 transition-transform duration-300">
+              {/* Luxury Client Info */}
+              <div className="flex items-center gap-5 pt-6 border-t border-gold/15">
+                <div className="w-16 h-16 rounded-3xl bg-gradient-premium flex items-center justify-center text-background font-bold text-xl shadow-gold group-hover:scale-110 transition-transform duration-400">
                   {testimonial.name.charAt(0).toUpperCase()}
                 </div>
                 <div className="flex-1">
-                  <div className="font-serif font-semibold text-lg text-primary">{testimonial.name}</div>
-                  <div className="text-sm text-gold font-medium">{testimonial.service}</div>
-                  <div className="text-xs text-gray-medium mt-1">{testimonial.period}</div>
+                  <div className="font-serif font-semibold text-xl text-primary">{testimonial.name}</div>
+                  <div className="text-sm text-gold font-semibold">{testimonial.service}</div>
+                  <div className="text-xs text-gray-medium mt-1.5">{testimonial.period}</div>
                 </div>
               </div>
 
-              {/* Hover Effect Border */}
-              <div className="absolute inset-0 rounded-xl border-2 border-gold/0 group-hover:border-gold/30 transition-all duration-300 pointer-events-none"></div>
+              {/* Luxury Hover Effect Border */}
+              <div className="absolute inset-0 rounded-2xl border-2 border-gold/0 group-hover:border-gold/25 transition-all duration-400 pointer-events-none"></div>
             </div>
           ))}
         </div>

@@ -92,8 +92,9 @@ export default {
 				'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)'
 			},
 			fontFamily: {
-				'serif': ['Playfair Display', 'serif'],
-				'sans': ['Inter', 'sans-serif']
+				'serif': ['Playfair Display', 'Cormorant Garamond', 'Georgia', 'serif'],
+				'sans': ['Lato', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+				'display': ['Playfair Display', 'serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

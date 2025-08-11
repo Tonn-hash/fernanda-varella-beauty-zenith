@@ -345,84 +345,99 @@ export const Services = () => {
   ];
 
   const ServiceCard = ({ service }: { service: Service }) => (
-    <Card className={`h-full transition-all duration-300 hover:shadow-elegant border-border/50 ${
-      service.highlight ? 'border-gold/50 bg-gradient-to-br from-background to-gold/5' : ''
+    <Card className={`card-service group h-full transition-all duration-500 hover:shadow-luxury hover:-translate-y-1 ${
+      service.highlight ? 'border-gold/30 bg-gradient-to-br from-background to-gold/3 shadow-gold' : 'border-border/20'
     }`}>
-      <CardHeader className="pb-4">
-        <div className="flex items-start justify-between gap-4">
-          <CardTitle className="text-lg leading-tight text-primary">
+      <CardHeader className="pb-6">
+        <div className="flex items-start justify-between gap-4 mb-4">
+          <CardTitle className="text-xl leading-tight text-primary font-serif text-balance">
             {service.name}
           </CardTitle>
           {service.highlight && (
-            <Badge variant="secondary" className="bg-gradient-gold text-white text-xs">
-              Popular
+            <Badge variant="secondary" className="bg-gradient-premium text-background text-xs font-semibold px-3 py-1 shadow-soft">
+              Destaque
             </Badge>
           )}
         </div>
-        <div className="flex items-center gap-4 text-sm text-gray-medium">
-          <div className="flex items-center gap-1">
-            <DollarSign className="h-4 w-4" />
-            <span className="font-semibold text-gold">{service.price}</span>
+        <div className="flex items-center gap-6 text-sm">
+          <div className="flex items-center gap-2">
+            <div className="h-8 w-8 bg-gold/10 rounded-full flex items-center justify-center">
+              <DollarSign className="h-4 w-4 text-gold" />
+            </div>
+            <span className="font-semibold text-gold text-lg">{service.price}</span>
           </div>
-          <div className="flex items-center gap-1">
-            <Clock className="h-4 w-4" />
-            <span>{service.duration}</span>
+          <div className="flex items-center gap-2">
+            <div className="h-8 w-8 bg-gray-light/30 rounded-full flex items-center justify-center">
+              <Clock className="h-4 w-4 text-gray-medium" />
+            </div>
+            <span className="text-gray-medium font-medium">{service.duration}</span>
           </div>
         </div>
       </CardHeader>
-      <CardContent className="pt-0">
-        <p className="text-gray-medium mb-4 leading-relaxed">
+      <CardContent className="pt-0 space-y-6">
+        <p className="text-gray-medium leading-relaxed text-balance">
           {service.description}
         </p>
         {service.packageInfo && (
-          <div className="mb-4 p-3 bg-gold/10 rounded-lg border border-gold/20">
-            <p className="text-sm text-gold font-medium">{service.packageInfo}</p>
+          <div className="p-4 bg-gradient-gold-subtle rounded-xl border border-gold/25 shadow-soft">
+            <p className="text-sm text-gold-dark font-semibold">{service.packageInfo}</p>
           </div>
         )}
         <Button 
           onClick={() => handleBooking(service.name)}
-          className="w-full bg-gradient-gold hover:shadow-gold transition-all duration-300"
-          size="sm"
+          variant="premium"
+          size="lg"
+          className="w-full shadow-gold group-hover:shadow-luxury"
         >
           <Calendar className="mr-2 h-4 w-4" />
-          Agendar
+          Agendar Serviço
         </Button>
       </CardContent>
     </Card>
   );
 
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-serif font-bold text-primary mb-6">
-            Nossos <span className="bg-gradient-gold bg-clip-text text-transparent">Serviços</span>
+    <section className="section-padding bg-gradient-to-br from-background to-gold-light/2 relative overflow-hidden">
+      {/* Luxury Background Elements */}
+      <div className="absolute inset-0 bg-dots opacity-6"></div>
+      <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-gold rounded-full blur-3xl opacity-4 animate-float"></div>
+      <div className="absolute bottom-20 right-20 w-64 h-64 bg-gradient-luxury rounded-full blur-3xl opacity-3"></div>
+      
+      <div className="container-luxury relative z-10">
+        {/* Luxury Header */}
+        <div className="text-center mb-20 space-luxury">
+          <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-gold-subtle border border-gold/25 rounded-full text-sm font-semibold text-gold-dark shadow-soft backdrop-blur-sm mb-8">
+            <Sparkles className="w-4 h-4 fill-current" />
+            Serviços Premium
+          </div>
+          
+          <h2 className="heading-section text-balance mb-8">
+            Nossos <span className="text-luxury">Serviços Exclusivos</span>
           </h2>
-          <p className="text-xl text-gray-medium max-w-3xl mx-auto leading-relaxed">
-            Oferecemos uma gama completa de serviços de beleza e estética, 
-            sempre com a excelência e cuidado que você merece.
+          <p className="text-xl text-gray-medium max-w-3xl mx-auto leading-relaxed text-balance">
+            Oferecemos uma gama completa de tratamentos de beleza de alto padrão, 
+            sempre com a excelência e sofisticação que você merece.
           </p>
         </div>
 
-        {/* Services Tabs */}
+        {/* Luxury Services Tabs */}
         <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
-          <TabsList className="grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-12 h-auto p-1 bg-gray-light/50">
+          <TabsList className="grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-16 h-auto p-2 bg-card/80 backdrop-blur-sm border border-gold/10 rounded-2xl shadow-soft">
             {categories.map((category) => (
               <TabsTrigger
                 key={category.id}
                 value={category.id}
-                className="flex flex-col items-center gap-2 p-4 text-xs data-[state=active]:bg-gradient-gold data-[state=active]:text-white"
+                className="flex flex-col items-center gap-3 p-6 text-sm font-medium transition-all duration-400 rounded-xl data-[state=active]:bg-gradient-gold data-[state=active]:text-background data-[state=active]:shadow-gold hover:bg-gold/5"
               >
-                {category.icon}
-                <span className="leading-tight text-center">{category.name}</span>
+                <div className="text-base">{category.icon}</div>
+                <span className="leading-tight text-center text-xs">{category.name}</span>
               </TabsTrigger>
             ))}
           </TabsList>
 
           {categories.map((category) => (
             <TabsContent key={category.id} value={category.id} className="mt-0">
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {category.services.map((service, index) => (
                   <ServiceCard key={index} service={service} />
                 ))}
@@ -431,20 +446,20 @@ export const Services = () => {
           ))}
         </Tabs>
 
-        {/* Call to Action */}
-        <div className="text-center mt-16">
-          <div className="max-w-2xl mx-auto">
-            <h3 className="text-2xl font-serif font-bold text-primary mb-4">
+        {/* Luxury Call to Action */}
+        <div className="text-center mt-20">
+          <div className="max-w-2xl mx-auto space-luxury">
+            <h3 className="text-3xl font-serif font-bold text-primary mb-6 text-balance">
               Não encontrou o que procura?
             </h3>
-            <p className="text-gray-medium mb-6">
-              Entre em contato conosco para consultas personalizadas e outros serviços especiais.
+            <p className="text-xl text-gray-medium mb-8 text-balance">
+              Entre em contato conosco para consultas personalizadas e tratamentos exclusivos.
             </p>
             <Button 
               onClick={() => handleBooking("Consulta Personalizada")}
-              variant="outline" 
-              size="lg"
-              className="border-gold text-gold hover:bg-gradient-gold hover:text-white hover:border-gold"
+              variant="premium"
+              size="xl"
+              className="shadow-luxury"
             >
               Consulta Personalizada
             </Button>

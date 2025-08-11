@@ -8,11 +8,15 @@ interface HeroProps {
 export const Hero = ({ type }: HeroProps) => {
   if (type === "home") {
     return (
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-gold-light/5 overflow-hidden">
-        {/* Premium Background Elements */}
-        <div className="absolute inset-0 bg-dots opacity-20"></div>
-        <div className="absolute top-20 right-20 w-72 h-72 bg-gradient-gold rounded-full blur-3xl opacity-10 animate-float"></div>
-        <div className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-luxury rounded-full blur-3xl opacity-5"></div>
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-gold-light/3 overflow-hidden">
+        {/* Luxury Background Elements */}
+        <div className="absolute inset-0 bg-dots opacity-15"></div>
+        <div className="absolute top-32 right-32 w-80 h-80 bg-gradient-gold rounded-full blur-3xl opacity-8 animate-float"></div>
+        <div className="absolute bottom-32 left-32 w-96 h-96 bg-gradient-luxury rounded-full blur-3xl opacity-4"></div>
+        
+        {/* Elegant decorative lines */}
+        <div className="absolute top-0 left-1/2 w-px h-32 bg-gradient-to-b from-transparent via-gold/30 to-transparent"></div>
+        <div className="absolute bottom-0 right-1/3 w-px h-24 bg-gradient-to-t from-transparent via-gold/20 to-transparent"></div>
         
         {/* Animated Particles */}
         <div className="absolute inset-0 overflow-hidden">
@@ -22,32 +26,32 @@ export const Hero = ({ type }: HeroProps) => {
         </div>
 
         <div className="container-luxury section-padding relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 xl:gap-24 items-center">
+          <div className="grid lg:grid-cols-2 gap-20 xl:gap-28 items-center">
             {/* Content */}
-            <div className="text-center lg:text-left space-y-10 animate-fade-in-up">
-              <div className="space-y-6">
-                {/* Badge */}
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-gold-subtle border border-gold/20 rounded-full text-sm font-medium text-gold-dark">
-                  <Star className="w-4 h-4" />
-                  Especialista Certificada
+            <div className="text-center lg:text-left space-luxury-lg animate-fade-in-up">
+              <div className="space-luxury">
+                {/* Premium Badge */}
+                <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-gold-subtle border border-gold/25 rounded-full text-sm font-semibold text-gold-dark shadow-soft backdrop-blur-sm">
+                  <Star className="w-4 h-4 fill-current" />
+                  Especialista Certificada Internacional
                 </div>
                 
-                <h1 className="heading-hero">
+                <h1 className="heading-hero text-balance">
                   <span className="text-primary block">Sobrancelhas</span>
-                  <span className="text-luxury block mt-2">Perfeitas</span>
-                  <span className="text-gray-medium text-xl lg:text-2xl font-sans font-light block mt-4">
-                    que realçam sua beleza natural
+                  <span className="text-luxury block mt-3">Perfeitas</span>
+                  <span className="text-gray-medium text-2xl lg:text-3xl font-sans font-light block mt-6 max-w-lg">
+                    que realçam sua beleza natural com elegância
                   </span>
                 </h1>
                 
-                <p className="text-xl lg:text-2xl text-gray-medium font-light max-w-2xl leading-relaxed">
-                  Transforme seu olhar com técnicas exclusivas de <span className="text-gold font-medium">micropigmentação premium</span>. 
-                  Resultados naturais que valorizam sua identidade única.
+                <p className="text-xl lg:text-2xl text-gray-medium font-light max-w-2xl leading-relaxed text-balance">
+                  Transforme seu olhar com técnicas exclusivas de <span className="text-gold font-semibold">micropigmentação de alto padrão</span>. 
+                  Resultados naturais que valorizam sua identidade única com sofisticação.
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
-                <Button 
+              <div className="flex flex-col sm:flex-row gap-8 justify-center lg:justify-start">
+                <Button
                   variant="premium"
                   size="xl" 
                   className="group"
