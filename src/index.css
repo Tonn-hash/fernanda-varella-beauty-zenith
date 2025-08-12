@@ -159,15 +159,15 @@ All colors MUST be HSL. Luxury aesthetic with sophisticated elements.
 @layer components {
   /* Luxury Button Variants */
   .btn-premium {
-    @apply relative overflow-hidden bg-gradient-premium text-background font-semibold px-10 py-4 rounded-2xl shadow-luxury transition-all duration-500 hover:shadow-gold hover:scale-[1.02] hover:-translate-y-1 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/25 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-800;
+    @apply relative overflow-hidden bg-gradient-premium text-background font-semibold px-10 py-4 rounded-2xl shadow-luxury transition-all duration-500 hover:shadow-gold hover:scale-[1.02] hover:-translate-y-1 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/25 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-all before:duration-500;
   }
 
   .btn-secondary {
-    @apply relative border-2 border-gold bg-transparent text-gold font-semibold px-10 py-4 rounded-2xl shadow-soft transition-all duration-400 hover:bg-gold hover:text-background hover:shadow-elegant hover:scale-[1.02] hover:-translate-y-0.5;
+    @apply relative border-2 border-gold bg-transparent text-gold font-semibold px-10 py-4 rounded-2xl shadow-soft transition-all duration-300 hover:bg-gold hover:text-background hover:shadow-elegant hover:scale-[1.02] hover:-translate-y-0.5;
   }
 
   .btn-glass {
-    @apply relative backdrop-blur-lg bg-white/8 border border-white/15 text-white font-medium px-8 py-4 rounded-xl shadow-soft transition-all duration-400 hover:bg-white/15 hover:scale-[1.02] hover:-translate-y-0.5;
+    @apply relative backdrop-blur-lg bg-white/10 border border-white/20 text-white font-medium px-8 py-4 rounded-xl shadow-soft transition-all duration-300 hover:bg-white/20 hover:scale-[1.02] hover:-translate-y-0.5;
   }
 
   /* Luxury Cards */
@@ -176,11 +176,11 @@ All colors MUST be HSL. Luxury aesthetic with sophisticated elements.
   }
 
   .card-service {
-    @apply relative bg-gradient-gray border border-gold/20 rounded-2xl shadow-soft hover:shadow-gold transition-all duration-400 hover:scale-[1.01] hover:-translate-y-0.5 p-8;
+    @apply relative bg-gradient-gray border border-gold/20 rounded-2xl shadow-soft hover:shadow-gold transition-all duration-300 hover:scale-[1.01] hover:-translate-y-0.5 p-8;
   }
 
   .card-testimonial {
-    @apply relative bg-card border border-border/20 rounded-2xl shadow-soft hover:shadow-elegant transition-all duration-400 hover:scale-[1.01] p-6;
+    @apply relative bg-card border border-border/20 rounded-2xl shadow-soft hover:shadow-elegant transition-all duration-300 hover:scale-[1.01] p-6;
   }
 
   .card-glass {
