@@ -80,7 +80,8 @@ export default {
 				'gradient-gold': 'var(--gradient-gold)',
 				'gradient-gold-subtle': 'var(--gradient-gold-subtle)',
 				'gradient-gray': 'var(--gradient-gray)',
-				'gradient-luxury': 'var(--gradient-luxury)'
+				'gradient-luxury': 'var(--gradient-luxury)',
+				'gradient-premium': 'var(--gradient-premium)'
 			},
 			boxShadow: {
 				'gold': 'var(--shadow-gold)',
