@@ -86,7 +86,8 @@ export default {
 			boxShadow: {
 				'gold': 'var(--shadow-gold)',
 				'elegant': 'var(--shadow-elegant)',
-				'soft': 'var(--shadow-soft)'
+				'soft': 'var(--shadow-soft)',
+				'luxury': 'var(--shadow-luxury)'
 			},
 			transitionTimingFunction: {
 				'luxury': 'cubic-bezier(0.4, 0, 0.2, 1)',
